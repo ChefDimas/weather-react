@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cecf44c2-ebfa-47c9-b382-2c67fee68c11" name="Changes" comment="Installed axios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +75,10 @@
       <workItem from="1669047691765" duration="2229000" />
       <workItem from="1669217125179" duration="2032000" />
       <workItem from="1669233758123" duration="23000" />
-      <workItem from="1669485814704" duration="1108000" />
+      <workItem from="1669485814704" duration="1249000" />
+      <workItem from="1669543444322" duration="4077000" />
+      <workItem from="1669559797923" duration="323000" />
+      <workItem from="1669560693463" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="Project init">
       <created>1669047745050</created>
@@ -103,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669485992826</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Installed axios">
+      <created>1669487073067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669487073067</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
