@@ -8,6 +8,7 @@ function App() {
 	const url = "https://api.openweathermap.org/data/2.5/weather?q=Vienna&appid=46534d0028a701b24f7e31b7931dce87&units=metric"
 	const city = 'Vienna'
 	const description = 'Cloudy'
+
 	return (
 		<main>
 			<div className="app">
@@ -16,7 +17,12 @@ function App() {
 						<h1>Right now in&#160;</h1>
 							<Location/>
 						<h1>, it's mostly&#160;</h1>
-							<span className="description">{description}</span>
+							<span className="description">{description}.</span>
+					</div>
+					<div className="bottom">
+						<div className="image"></div>
+						<div className="temp"></div>
+						<div className="indicators"></div>
 					</div>
 				</div>
 			</div>
