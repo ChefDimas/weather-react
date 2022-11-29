@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import axios from "axios";
 import Location from "./location/Location";
 import "./app.css";
-import sun from "../src/assets/weatherImges/sun.png";
+import sun from "../src/assets/weatherImages/sun.png";
 import { MdOutlineWaterDrop } from "react-icons/md";
 import { TbTemperature } from "react-icons/tb";
 import { WiStrongWind } from "react-icons/wi";
@@ -35,11 +35,18 @@ function App() {
                             </div>
                         </div>
                         <div className="indicators">
-                            <h4 className="pressure">8 mph</h4>
-                            <h4 className="humidity">
-                                66 %<MdOutlineWaterDrop />
+                            <h4 className="pressure">
+                                8 mph
+                                <TbTemperature />
                             </h4>
-                            <h4 className="windSpeed">4 KM/H</h4>
+                            <h4 className="humidity">
+                                66 %
+                                <MdOutlineWaterDrop />
+                            </h4>
+                            <h4 className="windSpeed">
+                                4 KM/H
+                                <WiStrongWind />
+                            </h4>
                         </div>
                     </div>
                 </div>
