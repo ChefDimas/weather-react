@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./location.css";
 
-const Location = () => {
+const Location = ({ childToParentData }) => {
     const [location, setLocation] = useState("");
     const [data, setData] = useState("");
 
@@ -14,6 +14,7 @@ const Location = () => {
                 setData(response.data);
                 console.log(response.data);
             });
+            childToParentData(data);
             setLocation("");
         }
     };

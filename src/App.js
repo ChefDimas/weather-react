@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Location from "./location/Location";
 import "./app.css";
@@ -8,10 +8,12 @@ import { TbTemperature } from "react-icons/tb";
 import { WiStrongWind } from "react-icons/wi";
 
 function App() {
-    const url =
-        "https://api.openweathermap.org/data/2.5/weather?q=Vienna&appid=46534d0028a701b24f7e31b7931dce87&units=metric";
-    const city = "Vienna";
-    const description = "Cloudy";
+    const [description, setDescription] = useState("sunny");
+    const [data, setData] = useState("");
+
+    const childToParentData = (data) => {
+        setData(data);
+    };
 
     return (
         <main>
@@ -19,16 +21,18 @@ function App() {
                 <div className="container">
                     <div className="top">
                         <h1>Right now in&#160;</h1>
-                        <Location />
+                        <Location childToParentData={childToParentData} />
                         <h1>, it's mostly&#160;</h1>
-                        <span className="description">{description}.</span>
+                        <span className="description">cloudy.</span>
                     </div>
                     <div className="bottom">
                         <div className="image">
                             <img src={sun} alt="sun" />
                         </div>
                         <div className="temp">
-                            <h1 className="mainTemp">64</h1>
+                            {data.main ? (
+                                <h1 className="mainTemp">{data.main.temp}</h1>
+                            ) : null}
                             <div className="tempMinMax">
                                 <h4 className="minTemp">61 ℃ /</h4>
                                 <h4 className="maxTemp">67 ℃</h4>
