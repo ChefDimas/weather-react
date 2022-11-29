@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@500;400;700&display=swap');
 
 *{
     padding: 0;
     margin: 0;
+}
+
+img{
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+h4{
+    font-weight: 500;
 }
 
 body{
@@ -20,7 +30,9 @@ body{
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 4rem;
     align-items: center;
     height: calc(100vh - 100px);
     width: calc(100% - 100px);
@@ -36,4 +48,35 @@ body{
 .description{
     font-weight: 700;
     font-size: 2rem;
+}
+
+.bottom{
+    max-height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.bottom > .image {
+    width: 10rem;
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainTemp {
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+.tempMinMax{
+    display: flex;
+    gap: 0.3rem;
+    color: slategray;
+    font-weight: 500;
 }

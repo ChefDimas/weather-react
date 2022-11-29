@@ -2,6 +2,10 @@ import React, {useState, useEffect, useRef} from "react";
 import axios from "axios";
 import Location from "./location/Location";
 import "./app.css"
+import sun from "../src/assets/weatherImges/sun.png";
+import {MdOutlineWaterDrop} from "react-icons/md"
+import {TbTemperature} from "react-icons/tb"
+import  {WiStrongWind} from "react-icons/wi"
 
 function App() {
 
@@ -20,9 +24,21 @@ function App() {
 							<span className="description">{description}.</span>
 					</div>
 					<div className="bottom">
-						<div className="image"></div>
-						<div className="temp"></div>
-						<div className="indicators"></div>
+						<div className="image">
+							<img src={sun} alt="sun"/>
+						</div>
+						<div className="temp">
+							<h1 className="mainTemp">64</h1>
+							<div className="tempMinMax">
+								<h4 className="minTemp">61 ℃ /</h4>
+								<h4 className="maxTemp">67 ℃</h4>
+							</div>
+						</div>
+						<div className="indicators">
+							<h4 className="pressure">8 mph</h4>
+							<h4 className="humidity">66 %<MdOutlineWaterDrop /></h4>
+							<h4 className="windSpeed">4 KM/H</h4>
+						</div>
 					</div>
 				</div>
 			</div>
