@@ -35,18 +35,18 @@ function App() {
                             </div>
                         </div>
                         <div className="indicators">
-                            <h4 className="pressure">
-                                8 mph
+                            <div className="indicator">
                                 <TbTemperature />
-                            </h4>
-                            <h4 className="humidity">
-                                66 %
+                                <h4 className="pressure">8 mph</h4>
+                            </div>
+                            <div className="indicator">
                                 <MdOutlineWaterDrop />
-                            </h4>
-                            <h4 className="windSpeed">
-                                4 KM/H
+                                <h4 className="humidity">66 %</h4>
+                            </div>
+                            <div className="indicator">
                                 <WiStrongWind />
-                            </h4>
+                                <h4 className="windSpeed">4 KM/H</h4>
+                            </div>
                         </div>
                     </div>
                 </div>

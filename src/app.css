@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@500;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;@500;400;700&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-img{
+img {
     display: block;
     max-height: 100%;
     max-width: 100%;
 }
 
-h4{
+h4 {
     font-weight: 500;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 
-.app{
+.app {
     box-sizing: border-box;
     min-height: 100vh;
     display: flex;
@@ -28,7 +28,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,24 +38,26 @@ body{
     width: calc(100% - 100px);
 }
 
-.top{
+.top {
     display: flex;
     justify-content: center;
     align-items: center;
     color: lightslategray;
 }
 
-.description{
+.description {
     font-weight: 700;
     font-size: 2rem;
 }
 
-.bottom{
-    max-height: 10rem;
+.bottom {
+    max-height: 11rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    box-sizing: border-box;
+    flex-basis: auto;
 }
 
 .bottom > .image {
@@ -74,9 +76,23 @@ body{
     font-weight: 300;
 }
 
-.tempMinMax{
+.tempMinMax {
     display: flex;
     gap: 0.3rem;
     color: slategray;
     font-weight: 500;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.indicator {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
