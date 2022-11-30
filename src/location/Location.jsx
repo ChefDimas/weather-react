@@ -14,13 +14,13 @@ const Location = ({ childToParentData }) => {
                 setData(response.data);
                 console.log(response.data);
             });
-            childToParentData(data);
             setLocation("");
         }
     };
 
     useEffect(() => {
         adjustInputSize();
+        childToParentData(data);
     });
 
     const handleSubmit = (e) => {
