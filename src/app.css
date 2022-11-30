@@ -55,8 +55,8 @@ body {
 }
 
 .bottom > .image {
-    width: 10rem;
-    height: 10rem;
+    width: 200px;
+    height: 100%;
 }
 
 .temp {

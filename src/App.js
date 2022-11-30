@@ -8,7 +8,6 @@ import { TbTemperature } from "react-icons/tb";
 import { WiStrongWind } from "react-icons/wi";
 
 function App() {
-    const [description, setDescription] = useState("sunny");
     const [data, setData] = useState("");
 
     const childToParentData = (data) => {
@@ -33,7 +32,7 @@ function App() {
                     </div>
                     <div className="bottom">
                         <div className="image">
-                            <WeatherIcon />
+                            <WeatherIcon data={data} />
                         </div>
                         {data.main ? (
                             <div className="temp">
