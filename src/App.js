@@ -56,21 +56,43 @@ function App() {
                                 </div>
                             </div>
                         )}
-
-                        <div className="indicators">
-                            <div className="indicator">
-                                <TbTemperature />
-                                <h4 className="pressure">8 mph</h4>
+                        {data.main ? (
+                            <div className="indicators">
+                                <div className="indicator">
+                                    <TbTemperature />
+                                    <h4 className="pressure">
+                                        {data.main.pressure} mph
+                                    </h4>
+                                </div>
+                                <div className="indicator">
+                                    <MdOutlineWaterDrop />
+                                    <h4 className="humidity">
+                                        {data.main.humidity} %
+                                    </h4>
+                                </div>
+                                <div className="indicator">
+                                    <WiStrongWind />
+                                    <h4 className="windSpeed">
+                                        {data.wind.speed} KM/H
+                                    </h4>
+                                </div>
                             </div>
-                            <div className="indicator">
-                                <MdOutlineWaterDrop />
-                                <h4 className="humidity">66 %</h4>
+                        ) : (
+                            <div className="indicators">
+                                <div className="indicator">
+                                    <TbTemperature />
+                                    <h4 className="pressure">0 mph</h4>
+                                </div>
+                                <div className="indicator">
+                                    <MdOutlineWaterDrop />
+                                    <h4 className="humidity">0 %</h4>
+                                </div>
+                                <div className="indicator">
+                                    <WiStrongWind />
+                                    <h4 className="windSpeed">0 KM/H</h4>
+                                </div>
                             </div>
-                            <div className="indicator">
-                                <WiStrongWind />
-                                <h4 className="windSpeed">4 KM/H</h4>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
