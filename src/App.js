@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Location from "./location/Location";
+import WeatherIcon from "./location/weatherIcon/WeatherIcon";
 import "./app.css";
-import sun from "../src/assets/weatherImages/sun.png";
 import { MdOutlineWaterDrop } from "react-icons/md";
 import { TbTemperature } from "react-icons/tb";
 import { WiStrongWind } from "react-icons/wi";
@@ -28,12 +28,12 @@ function App() {
                                 {data.weather[0].main}.
                             </span>
                         ) : (
-                            <span className="description">sunny.</span>
+                            <span className="description">Sunny.</span>
                         )}
                     </div>
                     <div className="bottom">
                         <div className="image">
-                            <img src={sun} alt="sun" />
+                            <WeatherIcon />
                         </div>
                         {data.main ? (
                             <div className="temp">
