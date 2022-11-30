@@ -23,21 +23,40 @@ function App() {
                         <h1>Right now in&#160;</h1>
                         <Location childToParentData={childToParentData} />
                         <h1>, it's mostly&#160;</h1>
-                        <span className="description">cloudy.</span>
+                        {data.weather ? (
+                            <span className="description">
+                                {data.weather[0].main}.
+                            </span>
+                        ) : (
+                            <span className="description">sunny.</span>
+                        )}
                     </div>
                     <div className="bottom">
                         <div className="image">
                             <img src={sun} alt="sun" />
                         </div>
-                        <div className="temp">
-                            {data.main ? (
+                        {data.main ? (
+                            <div className="temp">
                                 <h1 className="mainTemp">{data.main.temp}</h1>
-                            ) : null}
-                            <div className="tempMinMax">
-                                <h4 className="minTemp">61 ℃ /</h4>
-                                <h4 className="maxTemp">67 ℃</h4>
+                                <div className="tempMinMax">
+                                    <h4 className="minTemp">
+                                        {data.main.temp_min}℃ /
+                                    </h4>
+                                    <h4 className="maxTemp">
+                                        {data.main.temp_max}℃
+                                    </h4>
+                                </div>
                             </div>
-                        </div>
+                        ) : (
+                            <div className="temp">
+                                <h1 className="mainTemp">0.00</h1>
+                                <div className="tempMinMax">
+                                    <h4 className="minTemp">0 ℃ /</h4>
+                                    <h4 className="maxTemp">0 ℃</h4>
+                                </div>
+                            </div>
+                        )}
+
                         <div className="indicators">
                             <div className="indicator">
                                 <TbTemperature />
