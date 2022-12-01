@@ -12,6 +12,7 @@ function App() {
 
     const childToParentData = (data) => {
         setData(data);
+        // console.log(data);
     };
 
     return (
